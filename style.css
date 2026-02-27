@@ -13,35 +13,38 @@ body { background-color: var(--bg-color); color: var(--text-color); font-family:
 
 #particles-js { position: fixed; width: 100%; height: 100%; z-index: -1; opacity: 0.6; }
 
-/* Navigation */
+/* Navbar */
 nav { position: fixed; width: 100%; padding: 15px 0; background: rgba(4, 8, 16, 0.85); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid var(--border-color); }
 nav .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
 .nav-links { display: flex; gap: 20px; list-style: none; font-size: 0.9rem; }
 
-/* Profile Container */
-.profile-container { position: relative; width: clamp(140px, 20vw, 180px); height: clamp(140px, 20vw, 180px); margin: 0 auto 30px; }
+/* Hero Section Gacor (Centered) */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 80px; text-align: center; }
+.hero-content { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; }
+
+/* Profile Styles */
+.profile-wrapper { display: flex; justify-content: center; width: 100%; margin-bottom: 25px; }
+.profile-container { position: relative; width: 180px; height: 180px; }
 .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary-neon); position: relative; z-index: 2; }
 .profile-ring { position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px; border: 2px dashed var(--primary-neon); border-radius: 50%; animation: rotate 10s linear infinite; opacity: 0.5; }
 
 @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-/* Hero Section */
-.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; }
-.hero h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); margin-bottom: 10px; font-weight: 700; }
-.hero-headline { font-size: clamp(1rem, 4vw, 1.5rem); margin-bottom: 30px; min-height: 1.6em; }
+/* Hero Text */
+.text-content { width: 100%; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin-bottom: 10px; font-weight: 700; color: #fff; }
+.hero-headline { font-size: clamp(1rem, 4vw, 1.5rem); margin-bottom: 30px; min-height: 1.6em; color: #8b949e; }
 .typewriter-text { color: var(--primary-neon); text-shadow: 0 0 15px var(--primary-neon-glow); }
 
+/* Buttons */
 .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
 .btn { padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: 0.4s; font-size: 0.9rem; }
 .btn-primary { background: var(--primary-neon); color: #040810; box-shadow: 0 0 20px var(--primary-neon-glow); }
-.btn-secondary { border: 1px solid var(--border-color); color: var(--text-color); backdrop-filter: blur(5px); }
-.btn:hover { transform: translateY(-3px); }
+.btn-secondary { border: 1px solid var(--border-color); color: var(--text-color); }
 
 /* Sections */
 section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
-.section-title { text-align: center; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 50px; color: var(--primary-neon); }
-
-/* Skills Grid */
+.section-title { text-align: center; font-size: 2rem; margin-bottom: 50px; color: var(--primary-neon); }
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .skill-card { background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: 0.4s; backdrop-filter: blur(10px); }
 .skill-card:hover { border-color: var(--primary-neon); transform: translateY(-10px); }
@@ -57,14 +60,14 @@ section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
 footer { padding: 50px 20px; text-align: center; border-top: 1px solid var(--border-color); }
 .footer-socials { font-size: 1.8rem; display: flex; justify-content: center; gap: 25px; margin-bottom: 20px; }
 .footer-socials a { color: var(--text-color); transition: 0.3s; }
-.footer-socials a:hover { color: var(--primary-neon); transform: scale(1.2); }
+.footer-socials a:hover { color: var(--primary-neon); transform: translateY(-5px); }
 
 /* Animations */
 .animate-on-scroll { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
 .animate-in { opacity: 1; transform: translateY(0); }
 
-/* Mobile Adaptability */
+/* Mobile Optimasi */
 @media (max-width: 600px) {
     .nav-links { gap: 12px; font-size: 0.8rem; }
-    .hero { padding-top: 120px; }
+    .hero { padding-top: 100px; }
 }
